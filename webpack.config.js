@@ -3,6 +3,7 @@ let webpack = require('webpack');
 
 module.exports = {
     devtool: 'source-map',
+    watch: true,
     entry: {
         widget: [
             path.join(__dirname, 'src', 'widget', 'widget-index.js')

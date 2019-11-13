@@ -24,21 +24,14 @@ export default class MessageArea extends Component {
                     return (
                         <li class={from}>
                             <div class="msg">
-                            <a class="banner" href="https://github.com/idoco/intergram" target="_blank">
-                                Powered by <b>Intergram</b>&nbsp;
-                            </a>
                                 <p>{name ? name + ': ' + text : text}</p>
-                                { (props.conf.displayMessageTime) ?
-                                    <div class="time">
+                                <div class="time">
                                         {
                                             currentTime - new Date(time) < dayInMillis ?
                                                 dateFormat(time, 'HH:MM') :
                                                 dateFormat(time, 'm/d/yy HH:MM')
                                         }
                                     </div> 
-                                    :
-                                    ''
-                                }
                             </div>
                         </li>
                     );

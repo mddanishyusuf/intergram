@@ -49,12 +49,13 @@ export const mobileOpenWrapperStyle = {
 export const desktopTitleStyle = {
     height: '40px',
     lineHeight: '30px',
-    fontSize: '20px',
+    fontSize: '17px',
     display: 'flex',
+    fontWeight: '700',
     justifyContent: 'space-between',
     padding: '5px 0 5px 20px',
-    fontFamily: 'Lato, sans-serif',
-    color: '#fff',
+    fontFamily: '\'Muli\', sans-serif',
+    color: '#000',
     cursor: 'pointer',
 };
 
