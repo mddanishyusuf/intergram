@@ -1,9 +1,7 @@
 
 /* An adaptation of this https://codepen.io/Varo/pen/gbZzgr */
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 html, body {
     background: #e5e5e5;
-    font-family: 'Muli', sans-serif !important;
     margin: 0 auto;
 }
 
