@@ -17,7 +17,7 @@ export default class MessageArea extends Component {
         const currentTime = new Date();
         return (
             <ol class="chat">
-                {props.messages.map(({name, text, from, time}) => {
+                {props.messages.length > 0 ? props.messages.map(({name, text, from, time}) => {
                     if (from === 'visitor') {
                         name = 'You';
                     }
@@ -26,7 +26,7 @@ export default class MessageArea extends Component {
                             <div class="msg">
                                 <p>{name ? name + ': ' + text : text}</p>
                                 <div class="time">
-                                        {
+                                            {
                                             currentTime - new Date(time) < dayInMillis ?
                                                 dateFormat(time, 'HH:MM') :
                                                 dateFormat(time, 'm/d/yy HH:MM')
@@ -35,7 +35,7 @@ export default class MessageArea extends Component {
                             </div>
                         </li>
                     );
-                })}
+                }): (<div><div class="hello-message">👋</div> Hey</div>)}
             </ol>
         );
     }
