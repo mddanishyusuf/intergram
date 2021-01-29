@@ -38,5 +38,10 @@ function getUserId () {
 }
 
 function generateRandomId() {
-    return Math.random().toString(36).substr(2, 6);
+    if (!window.userLevel) {
+        console.error('Please set window.userLevel');
+        return Math.random().toString(36).substr(2, 6)
+    } else {
+        return Math.random().toString(36).substr(2, 6) + `-${window.userLevel}`;
+    }
 }
